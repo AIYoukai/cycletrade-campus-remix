@@ -151,26 +151,16 @@
       </span>
     </a>
 
-    <div class="ct-search-wrap">
-      <svg viewBox="0 0 24 24" fill="none" class="ct-search-icon h-4 w-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
-      <input id="globalSearch" type="search" placeholder="搜索车型、品牌或校区" autocomplete="off" class="ct-search">
-    </div>
-
-    <nav class="hidden lg:flex items-center gap-0.5">
-      <button class="nav-link" data-nav="home">找车</button>
+    <nav class="hidden md:flex items-center gap-0.5 ml-auto">
+      <button class="nav-link" data-nav="bikes">找车</button>
       <button class="nav-link" data-nav="flow">服务流程</button>
       <button class="nav-link" data-nav="orders">我的订单</button>
-      <button class="nav-link" data-nav="admin">后台审核</button>
     </nav>
 
-    <div class="ml-auto flex items-center gap-2">
-      <button onclick="openPublish()" class="btn btn-primary h-9 px-3.5 text-[12.5px]" aria-label="发布闲置">
+    <div class="ml-auto lg:ml-0 flex items-center gap-2">
+      <button onclick="openPublish()" class="btn btn-outline h-9 px-3.5 text-[12.5px]" aria-label="发布闲置">
         <svg viewBox="0 0 24 24" fill="none" class="h-3.5 w-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
         <span class="hidden sm:inline">发布闲置</span>
-      </button>
-      <button onclick="go('orders')" class="ct-header-orders btn btn-outline h-9 px-3 text-[12.5px] hidden sm:inline-flex">
-        <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l1.5 4.5H4.5L6 3Z"/><path d="M4.5 7.5V21h15V7.5"/><path d="M9.5 11.5a2.5 2.5 0 0 0 5 0"/></svg>
-        <span>我的订单</span>
       </button>
       <button onclick="go('admin')" class="ct-avatar" title="演示账号 · 管理员">YC</button>
     </div>
@@ -205,11 +195,11 @@
           面向香港高校学生与教职工的垂直二手单车平台。每一辆车都有溯源码与第三方验车报告，资金由平台担保托管，线下合作车行交付，让「毕业转手」和「低成本通勤」都变得可信。
         </p>
         <div class="ct-actions">
-          <button onclick="go('bikes')" class="btn btn-primary h-11 px-5 text-[13px]">
+          <button onclick="go('bikes')" class="btn btn-primary h-12 px-6 text-[13.5px]">
             浏览在售车辆
             <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
-          <button onclick="openPublish()" class="btn btn-outline h-11 px-4 text-[13px]">
+          <button onclick="openPublish()" class="btn btn-outline h-12 px-5 text-[13.5px]">
             <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4 text-mint-600" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V7l7-4Z"/><path d="m9 12 2 2 4-4"/></svg>
             预约免费验车
           </button>
@@ -264,8 +254,7 @@
       <div class="ct-stat"><b>128 辆</b><span>在售已核验车辆</span></div>
       <div class="ct-stat"><b>98.6%</b><span>官方验车通过率</span></div>
       <div class="ct-stat"><b>3.2 天</b><span>平均成交周期</span></div>
-      <div class="ct-stat"><b>5 所</b><span>覆盖香港高校</span></div>
-    </div>
+          </div>
   </div>
 
   <!-- Z · 中段：三块证据 -->
@@ -389,8 +378,8 @@
         <p>填写车架号与车况，预约合作车行免费验车。平台负责审核、曝光、担保交易与交付，你只管收钱。</p>
       </div>
       <div class="ct-cta-actions">
-        <button onclick="openPublish()" class="btn btn-primary h-11 px-5 text-[13px]">一键上架 / 预约验车</button>
-        <button onclick="go('flow')" class="btn btn-outline h-11 px-4 text-[13px]">了解服务</button>
+        <button onclick="openPublish()" class="btn btn-primary h-12 px-6 text-[13.5px]">一键上架 / 预约验车</button>
+        <button onclick="go('flow')" class="btn btn-outline h-12 px-5 text-[13.5px]">了解服务</button>
       </div>
     </div>
   </div>
@@ -409,7 +398,11 @@
           <h1 class="mt-2 text-[26px] font-bold tracking-tight">车辆列表</h1>
           <p class="mt-1 text-[12.5px] text-slate-500">共 <span id="bikesCount" class="font-semibold text-ink-900">6</span> 辆在售 · 全部支持线下看车与担保交易</p>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex w-full flex-wrap items-center gap-2 sm:w-auto">
+          <div class="relative w-full sm:w-auto">
+            <svg viewBox="0 0 24 24" fill="none" class="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-slate-400" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+            <input id="globalSearch" type="search" placeholder="搜索车型、品牌或校区" autocomplete="off" class="field !h-10 !pl-9 !text-[12.5px] w-full sm:w-[220px]">
+          </div>
           <label class="text-[11.5px] text-slate-500">排序</label>
           <select id="sortSelect" class="field !h-9 !text-[12.5px] w-[150px]" data-filter="sort">
             <option value="recommended">推荐排序</option>
@@ -2291,10 +2284,9 @@ h3{ font-weight:400; color:var(--ink-strong); }
 
 /* ---------- 顶栏 ---------- */
 .ct-header{
-  background:rgba(250,250,248,.92);
+  background:rgba(250,250,248,.94);
   backdrop-filter:blur(16px) saturate(120%);
   -webkit-backdrop-filter:blur(16px) saturate(120%);
-  border-bottom:1px solid var(--line);
 }
 .ct-header-bar{
   max-width:1120px; margin:0 auto; padding:0 24px;
@@ -2309,7 +2301,7 @@ h3{ font-weight:400; color:var(--ink-strong); }
   transition:transform .18s var(--ease);
 }
 .ct-logo:hover .ct-logo-mark{ transform:rotate(-4deg); }
-.ct-logo-name{ display:block; font-size:14.5px; font-weight:500; color:var(--ink-strong); letter-spacing:.01em; line-height:1.2; white-space:nowrap; }
+.ct-logo-name{ display:block; font-size:17px; font-weight:500; color:var(--ink-strong); letter-spacing:.01em; line-height:1.2; white-space:nowrap; }
 .ct-logo-name span{ color:var(--blue-ink); font-weight:400; }
 .ct-logo-sub{ display:block; font-size:9px; color:var(--faint); letter-spacing:.14em; line-height:1.4; margin-top:3px; white-space:nowrap; }
 .ct-search-wrap{ position:relative; width:260px; flex-shrink:0; }
@@ -2431,8 +2423,8 @@ label.lbl{ font-size:12px; font-weight:500; color:var(--muted); margin-bottom:.4
 .ct-eyebrow i{ width:5px; height:5px; border-radius:50%; background:var(--mint); display:block; }
 .ct-display{
   margin-top:24px;
-  font-size:clamp(36px,4.6vw,52px);
-  line-height:1.28; font-weight:300; letter-spacing:.01em;
+  font-size:clamp(38px,5vw,56px);
+  line-height:1.18; font-weight:300; letter-spacing:.005em;
   color:var(--ink-strong);
 }
 .ct-display em{ font-style:normal; color:var(--blue-ink); font-weight:300; }
@@ -2496,25 +2488,25 @@ label.lbl{ font-size:12px; font-weight:500; color:var(--muted); margin-bottom:.4
 .ct-botanical{ position:absolute; right:18px; bottom:14px; opacity:.35; pointer-events:none; }
 
 .ct-stats{
-  display:grid; grid-template-columns:repeat(4,1fr);
-  border-top:1px solid var(--line); padding:28px 0 40px;
+  display:grid; grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line); padding:22px 0 26px;
 }
 .ct-stat{ padding-left:24px; border-left:1px solid var(--line); }
 .ct-stat:first-child{ border-left:0; padding-left:0; }
-.ct-stat b{ display:block; font-size:28px; font-weight:300; color:var(--ink-strong); letter-spacing:-.01em; line-height:1.1; }
+.ct-stat b{ display:block; font-size:24px; font-weight:300; color:var(--ink-strong); letter-spacing:-.01em; line-height:1.15; }
 .ct-stat span{ display:block; margin-top:6px; font-size:11px; color:var(--muted); }
 
-.ct-section{ padding-top:88px; }
+.ct-section{ padding-top:120px; }
 .ct-section-head{ max-width:660px; margin-bottom:40px; }
 .ct-h2{ margin-top:10px; font-size:clamp(26px,3vw,34px); line-height:1.42; font-weight:300; color:var(--ink-strong); }
 .ct-sub{ margin-top:14px; font-size:13px; line-height:2; color:var(--muted); max-width:34em; }
 
-.ct-values{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.ct-values{ display:grid; grid-template-columns:repeat(3,1fr); gap:40px; }
 .ct-value{
-  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-card);
-  padding:30px 28px 32px; transition:border-color .18s var(--ease), transform .18s var(--ease), box-shadow .18s var(--ease);
+  background:transparent; border:0; border-top:1px solid var(--line); border-radius:0;
+  padding:24px 0 0; transition:border-color .18s var(--ease);
 }
-.ct-value:hover{ border-color:var(--line-strong); transform:translateY(-2px); box-shadow:var(--shadow-hover); }
+.ct-value:hover{ border-color:var(--line-strong); }
 .ct-value-top{ display:flex; align-items:center; justify-content:space-between; }
 .ct-value-icon{
   width:38px; height:38px; border-radius:10px;
@@ -2532,7 +2524,7 @@ label.lbl{ font-size:12px; font-weight:500; color:var(--muted); margin-bottom:.4
 .ct-tabs{ display:flex; gap:6px; flex-wrap:wrap; }
 .ct-more{ margin-top:28px; display:flex; justify-content:center; }
 
-.ct-process{ display:grid; grid-template-columns:.82fr 1.18fr; gap:72px; align-items:start; padding-top:96px; }
+.ct-process{ display:grid; grid-template-columns:.82fr 1.18fr; gap:72px; align-items:start; padding-top:120px; }
 .ct-process-copy{ position:sticky; top:132px; }
 .ct-process-list{ border-top:1px solid var(--line); }
 .ct-step{ display:grid; grid-template-columns:44px 1fr; gap:20px; padding:24px 0 26px; border-bottom:1px solid var(--line); }
@@ -2542,7 +2534,7 @@ label.lbl{ font-size:12px; font-weight:500; color:var(--muted); margin-bottom:.4
 .ct-step-meta{ margin-top:10px; display:flex; gap:14px; flex-wrap:wrap; font-size:10px; color:var(--faint); }
 
 .ct-cta{
-  margin-top:96px; padding:52px 0 56px;
+  margin-top:120px; padding:48px 0 52px;
   border-top:1px solid var(--line);
   display:flex; align-items:flex-end; justify-content:space-between; gap:40px;
 }
@@ -2610,7 +2602,7 @@ label.lbl{ font-size:12px; font-weight:500; color:var(--muted); margin-bottom:.4
   .ct-hero-grid{ grid-template-columns:1fr; gap:40px; padding-bottom:40px; }
   .ct-report{ max-width:520px; }
   .ct-stats{ grid-template-columns:repeat(2,1fr); gap:24px 0; padding:24px 0 8px; }
-  .ct-stat:nth-child(3){ border-left:0; padding-left:0; }
+  .ct-stat:nth-child(3){ border-left:0; padding-left:0; grid-column:span 2; }
   .ct-values{ grid-template-columns:1fr; }
   .ct-process{ grid-template-columns:1fr; gap:36px; padding-top:72px; }
   .ct-process-copy{ position:static; }
@@ -2618,7 +2610,7 @@ label.lbl{ font-size:12px; font-weight:500; color:var(--muted); margin-bottom:.4
   .ct-section{ padding-top:72px; }
 }
 @media (max-width:640px){
-  .ct-wrap{ padding:0 20px; }
+  .ct-wrap{ padding-left:20px; padding-right:20px; }
   .ct-header-bar{ padding:0 20px; height:64px; }
   .ct-subnav-inner{ padding:0 20px; }
   .ct-hero-grid{ gap:32px; }
