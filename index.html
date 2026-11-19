@@ -257,7 +257,34 @@
           </div>
   </div>
 
-  <!-- Z · 中段：三块证据 -->
+  <!-- Z · 中段：车辆 -->
+  <div class="ct-wrap ct-section">
+    <div class="ct-list-head reveal">
+      <div>
+        <span class="ct-kicker">Verified listings</span>
+        <h2 class="ct-h2">本周已核验好车</h2>
+        <p class="ct-sub">全部通过车架号核验与 12 项车况检测，支持线下看车与担保交易。</p>
+      </div>
+      <div class="ct-tabs">
+        <button class="type-chip is-active" data-type-filter="all">全部</button>
+        <button class="type-chip" data-type-filter="road">公路车</button>
+        <button class="type-chip" data-type-filter="mountain">山地车</button>
+        <button class="type-chip" data-type-filter="folding">折叠车</button>
+        <button class="type-chip" data-type-filter="commuter">通勤车</button>
+      </div>
+    </div>
+    <div id="homeGrid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5 reveal"></div>
+    <div id="homeEmpty" class="hidden ct-empty">
+      <p class="text-sm font-semibold">没有符合条件的车辆</p>
+      <p class="mt-1 text-[12.5px] text-slate-500">移除部分筛选条件后再试</p>
+      <button onclick="resetFilters()" class="btn btn-outline h-9 px-4 text-[12.5px] mt-4">清除筛选</button>
+    </div>
+    <div class="ct-more">
+      <button onclick="go('bikes')" class="btn btn-outline h-10 px-5 text-[12.5px]">查看全部在售车辆</button>
+    </div>
+  </div>
+
+  <!-- Z · 后段：三块证据 -->
   <div class="ct-wrap ct-section">
     <div class="ct-section-head reveal">
       <span class="ct-kicker">Why CycleTrade</span>
@@ -295,33 +322,6 @@
         <h3>第三方担保交易</h3>
         <p>买家付款进入平台托管账户，线下验车确认后 T+1 放款给卖家；车况不符可全额退款，资金全程可追溯。</p>
       </article>
-    </div>
-  </div>
-
-  <!-- Z · 下半：车辆 -->
-  <div class="ct-wrap ct-section">
-    <div class="ct-list-head reveal">
-      <div>
-        <span class="ct-kicker">Verified listings</span>
-        <h2 class="ct-h2">本周已核验好车</h2>
-        <p class="ct-sub">全部通过车架号核验与 12 项车况检测，支持线下看车与担保交易。</p>
-      </div>
-      <div class="ct-tabs">
-        <button class="type-chip is-active" data-type-filter="all">全部</button>
-        <button class="type-chip" data-type-filter="road">公路车</button>
-        <button class="type-chip" data-type-filter="mountain">山地车</button>
-        <button class="type-chip" data-type-filter="folding">折叠车</button>
-        <button class="type-chip" data-type-filter="commuter">通勤车</button>
-      </div>
-    </div>
-    <div id="homeGrid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5 reveal"></div>
-    <div id="homeEmpty" class="hidden ct-empty">
-      <p class="text-sm font-semibold">没有符合条件的车辆</p>
-      <p class="mt-1 text-[12.5px] text-slate-500">移除部分筛选条件后再试</p>
-      <button onclick="resetFilters()" class="btn btn-outline h-9 px-4 text-[12.5px] mt-4">清除筛选</button>
-    </div>
-    <div class="ct-more">
-      <button onclick="go('bikes')" class="btn btn-outline h-10 px-5 text-[12.5px]">查看全部在售车辆</button>
     </div>
   </div>
 
